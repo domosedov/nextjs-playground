@@ -8,8 +8,24 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "10.0.7",
+    "@hookform/resolvers": "^2.5.1",
+    "effector": "^21.8.11",
+    "effector-react": "^21.3.2",
+    "next": "^10.2.2",
+    "patronum": "^1.1.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-dropzone": "^11.3.2",
+    "react-fast-compare": "^3.2.0",
+    "react-hook-form": "^7.6.6",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@hookform/devtools": "^3.1.0",
+    "@types/node": "^15.6.0",
+    "@types/react": "^17.0.6",
+    "@types/react-dom": "^17.0.5",
+    "@types/yup": "^0.29.11",
+    "typescript": "^4.2.4"
   }
 }

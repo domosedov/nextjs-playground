@@ -1,6 +1,12 @@
-import { useEvent, useStore } from "effector-react/ssr";
+import { useEvent, useGate, useStore } from "effector-react/ssr";
 import { FC } from "react";
-import { $currentTodo, $todos, addTodo, select } from "../models/todos";
+import {
+  $currentTodo,
+  $todos,
+  addTodo,
+  select,
+  TodosPageGate,
+} from "../models/todos";
 import { addEffectorPreloadData } from "../models/add-effector-preload-data";
 
 export const getServerSideProps = async () => {
@@ -12,9 +18,11 @@ export const Todos: FC = () => {
   const add = useEvent(addTodo);
   const selectTodo = useEvent(select);
   const currentTodo = useStore($currentTodo);
+  useGate(TodosPageGate);
   return (
     <div>
       <h1>Todos</h1>
+      {Math.random()}
       <div>
         <button
           onClick={() =>
